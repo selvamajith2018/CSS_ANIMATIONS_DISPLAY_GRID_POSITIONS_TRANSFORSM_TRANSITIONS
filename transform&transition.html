@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Transform & Transition</title>
+    <style>
+        body{
+            margin:150px 0 0 300px;
+        }
+        #main-content{
+            width:350px;
+            height:250px;
+            border: 2px solid black;
+            position:relative;
+            overflow:hidden;
+        
+
+        }
+       #main-content img{
+            weight:inherit;
+            height:inherit;
+       }
+      /* #main-content:hover img{
+        transform:scale(1.5,1.5);
+       }*/
+       #left{
+        background: linear-gradient(45deg,orange,red);
+        width:50%;
+        height:100%;
+        position:absolute;
+        left:0;
+        top:0;
+        transform-origin: left;
+        
+        transition:all 5s;
+       }
+       #main-content:hover #left{
+        transform:perspective(400px)rotateY(90deg);
+       }
+       #right{
+        background-color: brown;
+        width:50%;
+        height:100%;
+        position:absolute;
+        right:0;
+        top:0;
+        transform-origin: right;
+        transform:perspective(400px) rotateY(0);
+        transition: all 5s;
+        
+       }
+       #main-content:hover #right{
+        transform: perspective(400px) rotateY(-90deg);
+       }
+    
+    </style>
+
+</head>
+<body>
+    <div id="main-content">
+        <img src="https://i.ytimg.com/vi/0xJmZQHNUOE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAZlAKHF4sk31mRKdGmQrP4vtrOpA" alt="">
+        <div id="left"></div>
+        <div id="right"></div>
+    </div> 
+</body>
+</html>

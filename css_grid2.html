@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>grid-template-area</title>
+    <style>
+        div{
+            border:2px solid black;
+            width: fit-content;
+            color: ghostwhite;
+            font-size: larger;
+            display:grid;
+            grid-template-columns: repeat(2,800px);
+            grid-template-rows: repeat(4,200px);
+            grid-template-areas: "header header""navbar navbar" "aside section" "footer footer";
+        }
+        div>header{
+            grid-area: header;
+            background-color: red;
+        }
+        div>nav{
+            grid-area: navbar;
+            background-color: orange;
+        }
+        div>aside{
+            grid-area: aside;
+            background-color: green;
+        }
+        div>section{
+            grid-area: section;
+            background-color: blue;
+        }
+        div>footer{
+            grid-area: footer;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <header>Header</header>
+        <nav>Navigation</nav>
+        <section>content</section>
+        <aside>aside</aside>
+        <footer>Footer</footer>
+    </div>
+    
+</body>
+</html>
